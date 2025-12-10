@@ -51,7 +51,7 @@
           background-size: 101% 101%;
           background-image: var(--backdrop);
           background-position: center;
-          overflow: hidden;
+          //   overflow: hidden;
       }
 
       .front,
@@ -89,13 +89,13 @@
           &>div {
               background-image: linear-gradient(rgba(0, 0, 0, 0.375), rgba(0, 0, 0, 0.75));
               backdrop-filter: blur(0px);
-              filter: blur(50px) opacity(0);
               border-radius: 0.5rem;
               width: 100%;
               height: 100%;
               box-sizing: border-box;
               transition: var(--spring-duration) ease;
               padding: 2rem 15%;
+              filter: blur(25px) opacity(0);
           }
       }
 
@@ -157,6 +157,8 @@
           }
 
           .back {
+              background-image: var(--poster);
+
               &>div {
                   background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
               }
