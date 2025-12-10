@@ -22,7 +22,6 @@ main {
     // --spring-easing: linear(0, 0.006 1.7%, 0.023 3.5%, 0.095 7.6%, 0.187 11.5%, 0.495 23.3%, 0.661 30.9%, 0.776 37.7%, 0.863 44.9%, 0.936 54.3%, 0.98 65.4%, 1.001 79%, 1);
     --spring-easing: ease;
     --spring-duration: 1s;
-    overflow-y: hidden;
 }
 
 input {
@@ -43,7 +42,7 @@ a:hover {
 
 body {
     margin: 0;
-    min-width: 320px;
+    // min-width: 320px;
     min-height: 100vh;
 }
 
