@@ -1,0 +1,30 @@
+.categories {
+    display: flex;
+    gap: 1rem;
+    // width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    float: right;
+    height: auto;
+
+    button {
+        transition: 1s ease;
+        border-radius: 5rem;
+
+        &.active {
+            background-color: rgb(183, 185, 249);
+            color: rgb(57, 25, 119);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .categories {
+        font-size: 0.8rem;
+        width: 100%;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+}
