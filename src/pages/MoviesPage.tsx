@@ -25,7 +25,7 @@ export default function MoviesPage() {
     return (
         <>
             <header>
-                <h1>Movie Browser</h1>
+                <h1>Cinéma Galaxie</h1>
             </header>
             <FiltersUI
                 value={filters}
