@@ -103,9 +103,7 @@
 
       &.isHover {
           z-index: 100;
-
-          transform:
-              translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(calc(50vw + 75vw / 2), calc(50vh + (75vw / (481/270)) / 2)) translateY(-50%) rotateY(-180deg);
+          transform: translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(calc(50vw + 75vw / 2), calc(50vh + (75vw / (481/270)) / 2)) translateY(-50%) rotateY(-180deg);
 
           .front,
           .back {
@@ -167,7 +165,8 @@
           }
 
           &.isHover {
-              transform: translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(50vw, 0) translate(calc(75vw / 2), calc(75vh / 2)) rotateY(-180deg);
+              transform: translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(calc(50vw + 75vw / 2), calc(50vh - 5rem/2)) rotateY(-180deg);
+              //   transform: translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(50vw, 0) translate(calc(75vw / 2), calc(75vh / 2)) rotateY(-180deg);
 
               .front,
               .back {
