@@ -69,17 +69,17 @@ export default function FiltersPanel({
                 </div>
                 <div className={styles.buttons}>
                     <button
-                        className={styles.applyButton}
-                        onClick={apply}
-                    >
-                        Apply filters
-                    </button>
-
-                    <button
                         className={styles.clearButton}
                         onClick={clear}
                     >
                         Clear filters
+                    </button>
+
+                    <button
+                        className={styles.applyButton}
+                        onClick={apply}
+                    >
+                        Apply filters
                     </button>
                 </div>
             </div>
