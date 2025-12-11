@@ -19,7 +19,6 @@ export default function MoviesPage() {
         isFetching,
         fetchNextPage,
         hasNextPage,
-        isFetchingNextPage,
     } = useMovies(filters, category);
 
     return (
@@ -41,7 +40,6 @@ export default function MoviesPage() {
                     movies={movies}
                     fetchNextPage={fetchNextPage}
                     hasNextPage={hasNextPage}
-                    isFetchingNextPage={isFetchingNextPage}
                     perPage={perPage}
                 />}
                 {(isFetching || isLoading) && <Loader size="normal" />}

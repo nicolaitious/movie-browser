@@ -10,7 +10,6 @@ interface MovieGridProps {
     movies: Movie[];
     fetchNextPage: () => void;
     hasNextPage?: boolean;
-    isFetchingNextPage: boolean;
     perPage: number;
 }
 
@@ -18,7 +17,6 @@ export default function MovieGrid({
     movies,
     fetchNextPage,
     hasNextPage,
-    isFetchingNextPage,
     perPage,
 }: MovieGridProps) {
 
@@ -72,8 +70,6 @@ export default function MovieGrid({
             </div>
 
             <div ref={sentinelRef} style={{ height: "40px" }} />
-
-            {isFetchingNextPage && <p style={{ textAlign: "center" }}>Loading more…</p>}
 
             {movies.length === 0 && <p style={{ textAlign: "center" }}>No results found</p>}
         </>
