@@ -18,7 +18,7 @@ export default React.memo(function MovieCard({
 
     const ref = useRef<HTMLDivElement | null>(null);
     const raf = useRef<number>(0);
-    const [loaded, setLoaded] = useState<boolean>(false);;
+    const [loaded, setLoaded] = useState<boolean>(false);
 
     const setCoords = () => {
         cancelAnimationFrame(raf.current);
@@ -30,6 +30,14 @@ export default React.memo(function MovieCard({
             ref.current!.style.setProperty("--card-y", rect.top + rect.height + "px");
         });
     }
+
+    const [backdrop, setBackdrop] = useState<string>("");
+
+    useEffect(() => {
+        if (isHover && !backdrop) {
+            setBackdrop(movie.backdropUrl);
+        }
+    }, [isHover, movie.backdropUrl]);
 
     useEffect(() => {
         const onResize = () => {
@@ -53,10 +61,6 @@ export default React.memo(function MovieCard({
                 className={`${styles.card} ${isHover ? styles.isHover : ''}`}
             >
                 <div
-                    style={{
-                        "--backdrop": `url(${movie.backdropUrl})`,
-                        "--poster": `url(${movie.posterUrl})`,
-                    } as React.CSSProperties}
                     className={styles.front}
                     onClick={() => handleClick()}
                 >
@@ -67,7 +71,7 @@ export default React.memo(function MovieCard({
                 </div>
                 <div
                     style={{
-                        "--backdrop": `url(${movie.backdropUrl})`,
+                        "--backdrop": `url(${backdrop})`,
                         "--poster": `url(${movie.posterUrl})`,
                     } as React.CSSProperties}
                     className={styles.back}

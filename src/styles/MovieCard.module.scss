@@ -49,7 +49,6 @@
           box-sizing: border-box;
           transition: var(--spring-duration) var(--spring-easing), filter 0.5s ease, width 0.75s ease;
           background-size: 101% 101%;
-          background-image: var(--backdrop);
           background-position: center;
           //   overflow: hidden;
       }
@@ -85,10 +84,10 @@
       }
 
       .back {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.375), rgba(0, 0, 0, 0.75)), var(--backdrop);
           gap: 0.5rem;
 
           &>div {
-              background-image: linear-gradient(rgba(0, 0, 0, 0.375), rgba(0, 0, 0, 0.75));
               backdrop-filter: blur(0px);
               border-radius: 0.5rem;
               width: 100%;
