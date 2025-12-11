@@ -42,7 +42,7 @@ export default function MoviesPage() {
                     hasNextPage={hasNextPage}
                     perPage={perPage}
                 />}
-                {(isFetching || isLoading) && <Loader size="normal" />}
+                {(isFetching || isLoading) && <Loader />}
             </section>
         </>
     );
