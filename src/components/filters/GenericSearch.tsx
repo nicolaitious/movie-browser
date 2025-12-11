@@ -33,6 +33,7 @@ export default function GenericSearch({
 
     return (
         <>
+            <ModalBackground callback={() => setOpen(false)} blurry visible={open && !value} />
             <button
                 className={styles.genericSearchButton}
                 onClick={() => setOpen(!open)}
@@ -46,9 +47,6 @@ export default function GenericSearch({
                     className={`${open ? styles.visible : ""}`}
                 />
             </button>
-
-            <ModalBackground callback={() => setOpen(false)} blurry visible={open && !value} />
-
             <div className={`${styles.genericSearchWrapper} ${open ? styles.visible : ""}`}>
                 <input
                     ref={inputRef}

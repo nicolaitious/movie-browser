@@ -49,6 +49,9 @@ export default function MovieGrid({
 
     return (
         <>
+
+            <ModalBackground callback={() => setHoveredId(null)} visible={hoveredId} />
+
             <div className={styles.grid}>
                 {movies.map((m, i) => {
                     return (
@@ -67,8 +70,6 @@ export default function MovieGrid({
                     )
                 })}
             </div>
-
-            <ModalBackground callback={() => setHoveredId(null)} visible={hoveredId} />
 
             <div ref={sentinelRef} style={{ height: "40px" }} />
 
