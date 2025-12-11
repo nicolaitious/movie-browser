@@ -49,6 +49,7 @@
           box-sizing: border-box;
           transition: var(--spring-duration) var(--spring-easing), filter 0.5s ease, width 0.75s ease;
           background-size: 101% 101%;
+          background-image: var(--poster);
           background-position: center;
           //   overflow: hidden;
       }
@@ -155,12 +156,8 @@
           }
 
           .back {
-              //   background-image: var(--poster);
+              background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), var(--backdrop);
               background-size: cover;
-
-              &>div {
-                  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
-              }
           }
 
           &.isHover {

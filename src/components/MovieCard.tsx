@@ -19,6 +19,7 @@ export default React.memo(function MovieCard({
     const ref = useRef<HTMLDivElement | null>(null);
     const raf = useRef<number>(0);
     const [loaded, setLoaded] = useState<boolean>(false);
+    const [backdrop, setBackdrop] = useState<string>("");
 
     const setCoords = () => {
         cancelAnimationFrame(raf.current);
@@ -31,15 +32,11 @@ export default React.memo(function MovieCard({
         });
     }
 
-    const [backdrop, setBackdrop] = useState<string>("");
-
     useEffect(() => {
         if (isHover && !backdrop) {
             setBackdrop(movie.backdropUrl);
         }
-    }, [isHover, movie.backdropUrl]);
 
-    useEffect(() => {
         const onResize = () => {
             if (isHover) setCoords();
         };
@@ -47,7 +44,6 @@ export default React.memo(function MovieCard({
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);
     }, [isHover]);
-
 
     const handleClick = () => {
         setCoords();
@@ -65,9 +61,6 @@ export default React.memo(function MovieCard({
                     onClick={() => handleClick()}
                 >
                     <img src={movie.posterUrl} onLoad={() => setLoaded(true)} />
-                    {/* <p>{movie.genre}</p>
-                <small>{movie.runtime}</small>
-                <small>{movie.rated}</small> */}
                 </div>
                 <div
                     style={{
@@ -76,7 +69,6 @@ export default React.memo(function MovieCard({
                     } as React.CSSProperties}
                     className={styles.back}
                     onClick={() => setHoveredId(null)}
-                // onTouchEnd={() => setHoveredId(null)}
                 >
                     <div>
                         <span>
