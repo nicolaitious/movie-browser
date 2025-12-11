@@ -167,12 +167,12 @@
           }
 
           &.isHover {
-              transform: translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(calc(50vw + 75vw / 2), calc(50vh + (75vw / (481/721)) / 2)) translateY(-50%) rotateY(-180deg);
+              transform: translate(calc(-1 * var(--card-x)), calc(-1 * var(--card-y))) translate(50vw, 0) translate(calc(75vw / 2), calc(75vh / 2)) rotateY(-180deg);
 
               .front,
               .back {
                   width: 75vw;
-                  height: calc(75vw / (481/721));
+                  height: 75vh;
               }
 
           }

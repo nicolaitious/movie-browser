@@ -81,3 +81,13 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .genericSearchWrapper {
+        .genericSearch {
+            &.visible {
+                width: 85%;
+            }
+        }
+    }
+}
