@@ -1,3 +1,4 @@
+import './styles/fonts.css';
 import './styles/App.scss';
 import MoviesPage from "./pages/MoviesPage";
 
