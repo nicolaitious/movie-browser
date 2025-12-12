@@ -1,5 +1,5 @@
-import MoviesPage from "./pages/MoviesPage";
 import './styles/App.scss';
+import MoviesPage from "./pages/MoviesPage";
 
 export default function App() {
     return (
