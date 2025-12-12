@@ -1,3 +1,15 @@
+@property --light-gold {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false
+}
+
+@property --dark-gold {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false
+}
+
 .categories {
     display: flex;
     gap: 1rem;
@@ -10,13 +22,25 @@
     height: auto;
 
     button {
-        transition: 1s ease;
+        // transition: --light-gold 0.5s ease, --dark-gold 0.5s ease, color 0.5s ease, border 0.5s ease;
+        transition: --light-gold 1s var(--cubic-bezier), --dark-gold 1s var(--cubic-bezier), color 1s var(--cubic-bezier), border 1s var(--cubic-bezier);
         border-radius: 5rem;
-        color: white;
+        color: #FFEFB5;
+        // color: #31f9e2;
+        background: linear-gradient(to right, var(--light-gold), var(--dark-gold));
+        background-size: 105%;
+        background-position: 50%;
+        border: 1px solid #FFEFB5;
+        // border: 1px solid #31f9e2;
 
+        &:hover,
         &.active {
-            background-color: rgb(183, 185, 249);
-            color: rgb(57, 25, 119);
+            border-color: transparent;
+            --light-gold: #C7A47A;
+            --dark-gold: #FFEFB5;
+            // --light-gold: #a27fcf;
+            // --dark-gold: #31f9e2;
+            color: var(--black);
         }
     }
 }
